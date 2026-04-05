@@ -7,9 +7,14 @@ arrayOfBtn.forEach(button =>{
     button.addEventListener('click',(e)=>{
         if (e.target.innerText == "=") {
             if(string == "") return;
-            string = eval(string); // To calculate
-            display.value = string;
-            ans = string; // To store the final answer in a variable.
+            try {
+              string = eval(string); // To calculate
+              display.value = string;
+              ans = string; // To store the final answer in a variable.
+            } catch (error) {
+                display.value = "Syntax ERROR";
+            }
+            
         }
         else if(e.target.id == "ops"){
             if (
