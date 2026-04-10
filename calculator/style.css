@@ -16,21 +16,31 @@ body{
     border: solid 3px rgb(34,32,32);
     padding: 20px;
     border-radius: 8px;
+    margin: auto;
     box-shadow: 3px 3px 0.4px rgba(9, 2, 2, 0.5);
 
 }
+@media(min-width:344px){
+    .container{
+        width: 340px;
+    }
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 9px;
+}
 #display{
-    background-color: rgb(26, 25, 25);
+    background-color: transparent;
     border: none;
     border-radius: 8px;
     text-align: right;
     padding: 10px;
-    font-size: large;
+    font-size: larger;
     margin-block: 15px;
-    box-shadow: 3px 3px 0.4px rgba(9, 2, 2, 0.5);
-    height: 35px;
+    height: 45px;
     width: 300px; 
-    color: aliceblue;  
+    color: aliceblue; 
 }
 #display::placeholder{
     color: aliceblue;
